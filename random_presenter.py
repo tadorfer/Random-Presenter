@@ -20,21 +20,20 @@ cos = lambda degs: math.cos(math.radians(degs))
 
 
 class Pic():
-    COS_0, COS_180 = cos(0), cos(180)
-    SIN_90, SIN_270 = sin(90), sin(270)
-
     def __init__(self, x, y, radius):
         self.x, self.y = x, y
         self.radius = radius
 
     def boundaries(self):
-        """ Return coords of rectangle surrounding circlular object. """
-        return (self.x + self.radius*self.COS_0,   self.y + self.radius*self.SIN_270,
-                self.x + self.radius*self.COS_180, self.y + self.radius*self.SIN_90)
+        """ Return coords of rectangle surrounding circlular object """
+        COS_0, COS_180 = cos(0), cos(180)
+        SIN_90, SIN_270 = sin(90), sin(270)
+        return (self.x + self.radius*COS_0,   self.y + self.radius*SIN_270,
+                self.x + self.radius*COS_180, self.y + self.radius*SIN_90)
 
 
 def circular_path(x, y, radius, delta_ang, start_ang=0):
-    """ Endlessly generate coords of a circular path every delta angle degrees. """
+    """ Endlessly generate coords of a circular path every delta angle degrees """
     ang = start_ang % 360
     while True:
         yield x + radius*cos(ang), y + radius*sin(ang)
@@ -102,15 +101,15 @@ def dec():
     canvas.create_image(WD/2, HT/2, image=tmp1)
     wdw.mainloop()
 
+
 def ctd():
-    global txt
-    txt = canvas.create_text(WD/2, HT/2, text=TIME, fill='darkred', 
+    ctd.txt = canvas.create_text(WD/2, HT/2, text=TIME, fill='darkred', 
                              font=('Arial','150', 'bold'))
  
 def tick():
     global TIME
     TIME -= 1
-    canvas.itemconfigure(txt, text=TIME)
+    canvas.itemconfigure(ctd.txt, text=TIME)
     if TIME == 0:
         None
     else:
