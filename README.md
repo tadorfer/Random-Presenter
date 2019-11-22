@@ -9,13 +9,13 @@ You can also replace the company logo with the one of your institution (and name
 
 __Python Version: 3.7__
 
-## Clone Repository
+## Clone repository
 
 ```
 $ git clone https://github.com/tadorfer/random-presenter.git
 ```
 
-## Install Required Package
+## Install required package
 
 Apart from PIL, all packages are part of the Python Standard Library. Thus, we need to first run:
 
@@ -23,7 +23,7 @@ Apart from PIL, all packages are part of the Python Standard Library. Thus, we n
 $ conda install -c anaconda pil
 ```
 
-## Execute Random Presenter
+## Execute 
 
 In order to execute the script, run:
 
