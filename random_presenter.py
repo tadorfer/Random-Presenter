@@ -85,6 +85,7 @@ def delay():
 
 
 path = os.path.dirname(os.path.abspath(__file__))
+company_name = 'Company\nName\n'
 
 PRESENTER_NUM = 6
 presenters = ['Presenter_'+str(num) for num in range(1, PRESENTER_NUM+1)]
@@ -115,7 +116,7 @@ logo_tmp = ImageTk.PhotoImage(Image.open('logo.png').resize((150, 95),
 canvas.create_image(WD-5, HT-2, image=logo_tmp, anchor='se')
 canvas.create_image(5, HT-5, image=logo_tmp, anchor='sw')
 
-canvas.create_text(WD/2, HT/2, text = 'Company\nName\n', 
+canvas.create_text(WD/2, HT/2, text = company_name, 
                    fill='silver', font=('Arial','25', 'bold'), justify='c')
 
 
