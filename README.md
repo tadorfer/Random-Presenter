@@ -5,7 +5,7 @@ This repository is a fun way to pick out a person (i.e. from a lab team or offic
 Photos for illustration purposes were taken from the [FACES database](https://faces.mpdl.mpg.de/imeji/collection/IXTdg721TwZwyZ8e?q=).
 
 It is recommended that you replace these photos with the photos of your colleagues and name them "FirstName_LastName.jpg".
-You can also replace the company logo with the one of your institution (and name it "logo.png") as well as the company name (ine 88), which is displayed in the center of the GUI.
+You can also replace the company logo with the one of your institution (and name it "logo.png") as well as the company name (line 88), which is displayed in the center of the GUI.
 
 __Python Version: 3.7__
 
@@ -18,5 +18,5 @@ $ conda install -c anaconda pil
 In order to execute the script, run:
 
 ```
-python3 random_presenter.python3
+python3 random_presenter.py
 ```
