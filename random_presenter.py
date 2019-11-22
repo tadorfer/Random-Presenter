@@ -1,7 +1,4 @@
-try:
-    import Tkinter as tk # Python 2.x
-except ImportError:
-    import tkinter as tk # Python 3.x
+import tkinter as tk # Note: for Python 2.x, use "import Tkinter as tk"
 from PIL import ImageTk, Image
 import math
 import random
