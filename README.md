@@ -37,7 +37,7 @@ After executing the above code cell, the GUI will open and the photos of the gro
   <img src="/Output/Members.png" height="700" width="650">
  </p>
 
-After pressing start, the countdown will start from 5 and will then reveal the randomly chosen person for the desired task.
+After pressing start, the countdown starts from 5 and will then reveal the randomly chosen person for the desired task.
 
 <p align="center">
   <img src="/Output/Presenter.png" height="700" width="650">
