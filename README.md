@@ -33,9 +33,13 @@ python3 random_presenter.py
 
 After executing the above code cell, the GUI will open and the photos of the group will start circling around the company name. 
 
-<img src="/Output/Members.png" height="700" width="650" align="center">
+<p align="center">
+  <img src="/Output/Members.png" height="700" width="650">
+ </p>
 
 After pressing start, the countdown will start from 5 and will then reveal the randomly chosen person for the desired task.
 
-<img src="/Output/Presenter.png" height="700" width="650" align="center">
+<p align="center">
+  <img src="/Output/Presenter.png" height="700" width="650">
+</p>
 
