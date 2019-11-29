@@ -9,10 +9,10 @@ You can also replace the company logo with the one of your institution (and name
 
 ```
 company_name = 'Company\nName\n' # replace with actual company name
-canvas_color = '#FDF5E6' # choose background color of canvas
-text_color = '#8B8B83' # choose text color
-ctd_color = 'darkred' # choose countdown color
-CTD_START = 5 # set the start of the countdown
+canvas_color = '#FDF5E6'         # choose background color of canvas
+text_color = '#8B8B83'           # choose text color
+ctd_color = 'darkred'            # choose countdown color
+CTD_START = 5                    # set the start of the countdown
 ```
 
 
