@@ -4,6 +4,14 @@ import math
 import random
 import os
 
+
+company_name = 'Company\nName\n' # replace with actual company name
+canvas_color = '#FDF5E6' # choose background color of canvas
+text_color = '#8B8B83' # choose text color
+ctd_color = 'darkred' # choose countdown color
+CTD_START = 5 # set the start of the countdown
+
+
 class Position():
     "Create initial position of images around a circular path"
     def __init__(self, x, y, radius):
@@ -49,7 +57,7 @@ def reveal():
     canvas.create_text(WD/2, HT/6, text='THE NEXT PRESENTER IS', fill='silver',
                        font=('Arial','35'), justify='c')
     canvas.create_text(WD/2, HT/1.25, text='%s' % presenters[ran].replace(
-                       "_", " "), fill='#8B8B83',
+                       "_", " "), fill=text_color,
                        font=('Arial','30', 'bold'), justify='c')
     tmp = Image.open(path+'/Photos/'+pictures[ran]).resize((250, 300), 
                      Image.ANTIALIAS)
@@ -59,7 +67,7 @@ def reveal():
 
 def ctd():
     "Display Countdown"
-    ctd.txt = canvas.create_text(WD/2, HT/2, text=TIME, fill='darkred', 
+    ctd.txt = canvas.create_text(WD/2, HT/2, text=TIME, fill=ctd_color, 
                                  font=('Arial','150', 'bold'))
     
 def tick():
@@ -77,21 +85,19 @@ def delete():
         
 def delay():
     wdw.after(DELAY, accel)
-    wdw.after(5000, reveal)
+    wdw.after(CTD_START*1000, reveal)
     wdw.after(1, ctd)
     wdw.after(1, tick)
-    wdw.after(5000, delete)
+    wdw.after(CTD_START*1000, delete)
     b1.config(state='disabled')
 
 
 path = os.path.dirname(os.path.abspath(__file__))
-company_name = 'Company\nName\n'
-
 PRESENTER_NUM = 6
 presenters = ['Presenter_'+str(num) for num in range(1, PRESENTER_NUM+1)]
 pictures = [presenters[num]+'.jpg' for num in range(len(presenters))]
 
-TIME = 6
+TIME = CTD_START+1
 DELAY = 12
 HT, WD = 700, 800
 
@@ -108,7 +114,7 @@ for i in range(len(pictures)):
    x_start.append(WD/4+round(random.uniform(-4, 4),2))
    y_start.append(HT/4+round(random.uniform(-4, 4),2))
 
-canvas = tk.Canvas(wdw, bg='#FDF5E6', height=HT, width=WD)
+canvas = tk.Canvas(wdw, bg=canvas_color, height=HT, width=WD)
 canvas.pack()
 
 logo_tmp = ImageTk.PhotoImage(Image.open('logo.png').resize((150, 95), 
@@ -117,7 +123,7 @@ canvas.create_image(WD-5, HT-2, image=logo_tmp, anchor='se')
 canvas.create_image(5, HT-5, image=logo_tmp, anchor='sw')
 
 canvas.create_text(WD/2, HT/2, text = company_name, 
-                   fill='silver', font=('Arial','25', 'bold'), justify='c')
+                   fill=text_color, font=('Arial','25', 'bold'), justify='c')
 
 
 img, img_obj, tmp = [], [], []
