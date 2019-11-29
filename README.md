@@ -28,7 +28,7 @@ $ conda install -c anaconda pil
 In order to execute the script, run:
 
 ```
-python3 random_presenter.py
+$ python3 random_presenter.py
 ```
 
 After executing the above code cell, the GUI will open and the photos of the group will start circling around the company name. 
