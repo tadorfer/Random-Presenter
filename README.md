@@ -1,4 +1,4 @@
-# Random-Presenter
+# Random Presenter
 
 This repository is a fun way to pick out a person (i.e. from a lab team or office) at random for a particular task. It can be useful for presentations (which was the original intention), but also for various other activities where a random person needs to be chosen. 
 
@@ -9,17 +9,28 @@ You can also replace the company logo with the one of your institution (and name
 
 __Python Version: 3.7__
 
+## Clone repository
+
+```
+$ git clone https://github.com/tadorfer/random-presenter.git
+```
+
+## Install required package
+
 Apart from PIL, all packages are part of the Python Standard Library. Thus, we need to first run:
 
 ```
 $ conda install -c anaconda pil
 ```
 
+## Execute 
+
 In order to execute the script, run:
 
 ```
 python3 random_presenter.py
 ```
+<<<<<<< HEAD
 
 After executing the above code cell, the GUI will open and the photos of the group will start circling around the company name. 
 
@@ -28,3 +39,5 @@ After executing the above code cell, the GUI will open and the photos of the gro
 After pressing start, the countdown will start from 5 and will then reveal the randomly chosen person for the desired task.
 
 ![alt Image](/Output/Presenter.png)
+=======
+>>>>>>> 4e113f13ea54ad7ea3272ed500e60543a0380308
