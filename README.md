@@ -30,14 +30,11 @@ In order to execute the script, run:
 ```
 python3 random_presenter.py
 ```
-<<<<<<< HEAD
 
 After executing the above code cell, the GUI will open and the photos of the group will start circling around the company name. 
 
-![alt Image](/Output/Members.png)
+![Members](/Output/Members.png)
 
 After pressing start, the countdown will start from 5 and will then reveal the randomly chosen person for the desired task.
 
-![alt Image](/Output/Presenter.png)
-=======
->>>>>>> 4e113f13ea54ad7ea3272ed500e60543a0380308
+![Presenter](/Output/Presenter.png)
