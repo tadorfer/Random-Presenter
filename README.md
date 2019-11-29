@@ -15,7 +15,7 @@ __Python Version: 3.7__
 $ git clone https://github.com/tadorfer/random-presenter.git
 ```
 
-## Install required package
+## Installation
 
 Apart from PIL, all packages are part of the Python Standard Library. Thus, we need to first run:
 
@@ -23,7 +23,7 @@ Apart from PIL, all packages are part of the Python Standard Library. Thus, we n
 $ conda install -c anaconda pil
 ```
 
-## Execute 
+## Execution 
 
 In order to execute the script, run:
 
