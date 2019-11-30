@@ -3,6 +3,7 @@ from PIL import ImageTk, Image
 import math
 import random
 import os
+import glob
 
 
 company_name = 'Company\nName\n' # replace with actual company name
@@ -93,7 +94,7 @@ def delay():
 
 
 path = os.path.dirname(os.path.abspath(__file__))
-PRESENTER_NUM = 6
+PRESENTER_NUM = len(glob.glob(path+'/Photos/*.jpg'))
 presenters = ['Presenter_'+str(num) for num in range(1, PRESENTER_NUM+1)]
 pictures = [presenters[num]+'.jpg' for num in range(len(presenters))]
 
