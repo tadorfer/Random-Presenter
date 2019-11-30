@@ -24,7 +24,7 @@ $ git clone https://github.com/tadorfer/random-presenter.git
 
 ## Installation
 
-Apart from PIL, all packages are part of the Python Standard Library. Thus, we need to first run:
+PIL - a package for opening, manipulating, and saving image files
 
 ```
 $ conda install -c anaconda pil
