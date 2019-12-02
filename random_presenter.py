@@ -13,7 +13,7 @@ ctd_color = 'darkred' # choose countdown color
 CTD_START = 5 # set the start of the countdown
 
 
-class Position():
+class Position:
     "Create initial position of images around a circular path"
     def __init__(self, x, y, radius):
         self.x, self.y = x, y
@@ -55,7 +55,7 @@ def accel():
 def reveal():
     "Reveal and display the random presenter"
     ran = random.randrange(0,len(pictures))
-    canvas.create_text(WD/2, HT/6, text='THE NEXT PRESENTER IS', fill='silver',
+    canvas.create_text(WD/2, HT/6, text='THE NEXT PRESENTER IS', fill=text_color,
                        font=('Arial','35'), justify='c')
     canvas.create_text(WD/2, HT/1.25, text='%s' % presenters[ran].replace(
                        "_", " "), fill=text_color,
