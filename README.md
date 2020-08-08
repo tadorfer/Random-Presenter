@@ -1,6 +1,6 @@
 # Random Presenter
 
-This repository is a fun way to pick out a person (i.e. from a lab team or office) at random for a particular task. It can be useful for presentations (which was the original intention), but also for various other activities where a random person needs to be chosen. 
+This repository is a fun way to pick out a person (i.e. from a lab group or office) at random for a particular task. It can be useful for presentations (which was the original intention), but also for various other activities where a random person needs to be chosen. 
 
 Photos for illustration purposes were taken from the [FACES database](https://faces.mpdl.mpg.de/imeji/collection/IXTdg721TwZwyZ8e?q=).
 
