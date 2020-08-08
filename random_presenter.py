@@ -10,7 +10,7 @@ company_name = 'Company\nName\n' # replace with actual company name
 canvas_color = '#FDF5E6' # choose background color of canvas
 text_color = '#8B8B83' # choose text color
 ctd_color = 'darkred' # choose countdown color
-CTD_START = 5 # set the start of the countdown
+CTD_START = 3 # set the start of the countdown
 
 
 class Position:
