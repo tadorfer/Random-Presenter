@@ -14,13 +14,13 @@ CTD_START = 5 # set the start of the countdown
 
 
 class Position:
-    "Create initial position of images around a circular path"
+    """Create initial position of images around a circular path"""
     def __init__(self, x, y, radius):
         self.x, self.y = x, y
         self.radius = radius
 
     def boundaries(self):
-        """ Return coords of rectangle surrounding circlular object """
+        """Return coords of rectangle surrounding circlular object"""
         COS_0, COS_180 = cos(0), cos(180)
         SIN_90, SIN_270 = sin(90), sin(270)
         return (self.x + self.radius*COS_0,   self.y + self.radius*SIN_270,
@@ -28,14 +28,14 @@ class Position:
 
 
 def circle(x, y, radius, delta_ang, start_ang=0):
-    """ Endlessly generate coords of circular path every delta_ang degrees """
+    """Endlessly generate coords of circular path every delta_ang degrees"""
     ang = start_ang % 360
     while True:
         yield x + radius*cos(ang), y + radius*sin(ang)
         ang = (ang+delta_ang) % 360
         
 def update_position(canvas, id, pic_obj, path_iter):
-    "Update position of images"
+    """Update position of images"""
     if canvas.coords(id) != []:
         pic_obj.x, pic_obj.y = next(path_iter)
         x0, y0 = canvas.coords(id)
@@ -45,7 +45,7 @@ def update_position(canvas, id, pic_obj, path_iter):
         canvas.after(DELAY, update_position, canvas, id, pic_obj, path_iter)
 
 def accel():
-    "Accelerate images for shuffling effect"
+    """Accelerate images for shuffling effect"""
     for j in range(len(pictures)):
         path_iter = circle(x_start[j], y_start[j], 
                     orbital_radius[j], CP_INCR[j]*5)
@@ -53,7 +53,7 @@ def accel():
         wdw.after(DELAY, update_position, canvas, img[j], img_obj[j], path_iter)
 
 def reveal():
-    "Reveal and display the random presenter"
+    """Reveal and display the random presenter"""
     ran = random.randrange(0,len(pictures))
     canvas.create_text(WD/2, HT/6, text='THE NEXT PRESENTER IS', fill=text_color,
                        font=('Arial','35'), justify='c')
@@ -67,12 +67,12 @@ def reveal():
     wdw.mainloop()
 
 def ctd():
-    "Display Countdown"
+    """Display Countdown"""
     ctd.txt = canvas.create_text(WD/2, HT/2, text=TIME, fill=ctd_color, 
                                  font=('Arial','150', 'bold'))
     
 def tick():
-    "Countdown"
+    """Countdown function"""
     global TIME
     TIME -= 1
     canvas.itemconfigure(ctd.txt, text=TIME)
@@ -80,11 +80,12 @@ def tick():
         canvas.after(1000, tick)
         
 def delete():
-    "Delete shuffling images"
+    """Delete shuffling images"""
     for i in range(len(pictures)):
         canvas.delete(img[i])
         
 def delay():
+    """Delays of displayed objects on canvas"""
     wdw.after(DELAY, accel)
     wdw.after(CTD_START*1000, reveal)
     wdw.after(1, ctd)
